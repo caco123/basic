@@ -14,7 +14,7 @@ export class UsersService {
 
   getAll(): Promise<User[]> {
     return new Promise<User[]>((resolve, reject) => {
-      this.http.get<User[]>(`${this.url}/users`).subscribe({
+      this.http.get<User[]>(`${this.url}/userss`).subscribe({
         next: (res: any) => {
           const data: User[] = res.map((res: any) => {
             return new User(res);

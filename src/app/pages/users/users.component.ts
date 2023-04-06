@@ -13,10 +13,14 @@ export class UsersComponent implements OnInit {
   constructor(private userService: UsersService) { this.users = [] }
 
   async ngOnInit() {
-    /* this.users = await this.userService.getAll();
-    console.log(this.users) */
+    //this.users = await this.userService.getAll();
 
-    this.users = await firstValueFrom(this.userService.all2());
+    try {
+      this.users = await firstValueFrom(this.userService.all2());
+
+    } catch (error) {
+      console.warn(error)
+    }
 
   }
 
