@@ -1,0 +1,23 @@
+<ul>
+    <li><a routerLink="/home">Atras</a></li>
+</ul>
+
+<table *ngIf="users">
+    <thead>
+        <th>id</th>
+        <th>email</th>
+        <th>username</th>
+        <th>password</th>
+        <th>phone</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.phone}}</td>
+        </tr>
+    </tbody>
+</table>
