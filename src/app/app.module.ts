@@ -7,20 +7,23 @@ import { UsersComponent } from './pages/users/users.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { UsersService } from './services/users.service';
+import { ProductService } from './services/product.service';
+import { CartComponent } from './pages/Cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [UsersService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

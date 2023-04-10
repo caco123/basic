@@ -1,1 +1,23 @@
-<p>products works!</p>
+<ul>
+    <li><a routerLink="/home">Atras</a></li>
+</ul>
+
+<table *ngIf="products">
+    <thead>
+        <th>id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>description</th>
+        <th>image</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let pro of products">
+            <td>{{pro.id}}</td>
+            <td>{{pro.title}}</td>
+            <td>{{pro.price}}</td>
+            <td>{{pro.description}}</td>
+            <td>{{pro.image}}</td>
+        </tr>
+    </tbody>
+</table>
