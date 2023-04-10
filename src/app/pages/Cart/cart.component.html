@@ -1,0 +1,27 @@
+<ul>
+    <li><a routerLink="/home">Atras</a></li>
+</ul>
+
+<table *ngIf="carts">
+    <thead>
+        <th>id</th>
+        <th>userId</th>
+        <th>total</th>
+        <th>discountedTotal</th>
+        <th>totalQuantity</th>
+        <th>totalProducts</th>
+    
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let cart of carts">
+            <td>{{cart.id}}</td>
+            <td>{{cart.userId}}</td>
+            <td>{{cart.total}}</td>
+            <td>{{cart.discountedTotal}}</td>
+            <td>{{cart.totalQuantity}}</td>
+            <td>{{cart.totalProducts}}</td>
+        
+        </tr>
+    </tbody>
+</table>
