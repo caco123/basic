@@ -7,20 +7,22 @@ import { UsersComponent } from './pages/users/users.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { UsersService } from './services/users.service';
+import { UserDetailComponent } from './pages/users/user-detail/user-detail.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UsersComponent,
-    HomeComponent,
-    ProductsComponent
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
+  declarations: [
+    AppComponent,
+    UsersComponent,
+    HomeComponent,
+    ProductsComponent,
+    UserDetailComponent
+  ],
+  bootstrap: [AppComponent],
   providers: [UsersService],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }

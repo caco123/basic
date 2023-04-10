@@ -9,14 +9,14 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  users!: User[]
-  constructor(private userService: UsersService) { this.users = [] }
+  users!: User[];
+
+  constructor(private userService: UsersService) { }
 
   async ngOnInit() {
-    //this.users = await this.userService.getAll();
 
     try {
-      this.users = await firstValueFrom(this.userService.all2());
+      this.users = await firstValueFrom(this.userService.getAll());
 
     } catch (error) {
       console.warn(error)
