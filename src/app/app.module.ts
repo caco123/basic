@@ -10,6 +10,7 @@ import { UsersService } from './services/users.service';
 import { ProductService } from './services/product.service';
 import { CartComponent } from './pages/Cart/cart.component';
 import { UserDetailComponent } from './pages/users/user-detail/user-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserDetailComponent } from './pages/users/user-detail/user-detail.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

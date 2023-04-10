@@ -19,10 +19,16 @@ export class UsersService {
       map((res: any) => res.map((user: any) => new User(user)))
     )
   }
+
   getSingle(id: number): Observable<User> {
     return this.http.get<User>(`${this.url}/users/${id}`).pipe(
       tap((res: any) => new User(res))
     )
   }
 
+  save(user: User): Observable<User> {
+    return this.http.put<User>(`${this.url}/users/${user.id}`, user).pipe(
+      tap((res: any) => new User(res))
+    )
+  }
 }

@@ -1,1 +1,11 @@
-<p>user-detail works!</p>
+<form [formGroup]="form" *ngIf="form" (ngSubmit)="enviar()">
+    <label for="email">email</label>
+    <input type="text" id="email" formControlName="email">
+    <label for="username">username</label>
+    <input type="text" id="username" formControlName="username">
+    <label for="password">password</label>
+    <input type="text" id="password" formControlName="password">
+    <label for="phone">phone</label>
+    <input type="text" id="phone" formControlName="phone">
+    <button type="submit">guardar</button>
+</form>
