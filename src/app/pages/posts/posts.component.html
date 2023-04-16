@@ -1,0 +1,23 @@
+<ul>
+    <li><a routerLink="/home">Atras</a></li>
+</ul>
+
+<table *ngIf="posts">
+    <thead>
+        <th>id</th>
+        <th>title</th>
+        <th>body</th>
+        <th>userId</th>
+        <th>tags</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let pro of posts">
+            <td>{{pro.id}}</td>
+            <td>{{pro.title}}</td>
+            <td>{{pro.body}}</td>
+            <td>{{pro.userId}}</td>
+            <td>{{pro.tags}}</td>
+        </tr>
+    </tbody>
+</table>
