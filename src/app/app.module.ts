@@ -13,6 +13,7 @@ import { UserDetailComponent } from './pages/users/user-detail/user-detail.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { FruitsComponent } from './pages/fruits/fruits.component';
 import { PostsComponent } from './pages/posts/posts.component';
+import { ProductDetailComponent } from './pages/products/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PostsComponent } from './pages/posts/posts.component';
     ProductsComponent,
     CartComponent,
     UserDetailComponent,
-    FruitsComponent
+    FruitsComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
