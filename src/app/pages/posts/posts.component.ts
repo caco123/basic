@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { Product } from 'src/app/models/produc.model';
-import { ProductService } from 'src/app/services/product.service';
+import { posts } from 'src/app/models/posts.model';
+import { postsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-posts',
@@ -9,15 +9,15 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-posts:Post[]
-  constructor(private PostsService: PostsService) {
+posts:posts[]
+  constructor(private postsService: postsService) {
     this.posts=[]
    }
 
    async ngOnInit() {
 
     try {
-      this.posts = await firstValueFrom(this.PostsService.all2());
+      this.posts = await firstValueFrom(this.postsService.all2());
 
     } catch (error) {
       console.warn(error)
