@@ -11,15 +11,19 @@ import { ProductService } from './services/product.service';
 import { CartComponent } from './pages/Cart/cart.component';
 import { UserDetailComponent } from './pages/users/user-detail/user-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FruitsComponent } from './pages/fruits/fruits.component';
+import { PostsComponent } from './pages/posts/posts.component';
 
 @NgModule({
   declarations: [
+    PostsComponent,
     AppComponent,
     UsersComponent,
     HomeComponent,
     ProductsComponent,
     CartComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    FruitsComponent
   ],
   imports: [
     BrowserModule,

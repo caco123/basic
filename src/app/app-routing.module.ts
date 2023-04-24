@@ -5,6 +5,7 @@ import { UsersComponent } from './pages/users/users.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { CartComponent } from './pages/Cart/cart.component';
 import { UserDetailComponent } from './pages/users/user-detail/user-detail.component';
+import { PostsComponent } from './pages/posts/posts.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'users/:id', component: UserDetailComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'carts', component: CartComponent },
+  { path: 'posts', component: PostsComponent },
   { path: '**', redirectTo: 'home' }];
 
 @NgModule({

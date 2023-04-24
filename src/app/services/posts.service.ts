@@ -5,11 +5,11 @@ import { environment } from 'src/environments/environment';
 import { User } from '../models/user.model';
 import { Product } from '../models/produc.model';
 import { Cart } from '../models/cart.model ';
-import { posts } from '../models/posts.model';
+import { Post } from '../models/posts.model';
 @Injectable({
   providedIn: 'root'
 })
-export class postsService {
+export class PostsService {
 
   url: string = environment.dummyjson;
 
@@ -17,9 +17,9 @@ export class postsService {
 
  
    
-  all2(): Observable<posts[]> {
-    return this.http.get<posts[]>(`${this.url}/posts`).pipe(
-      map((res: any) => res.posts.map((a: any) => new posts(a)))
+  all2(): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.url}/posts`).pipe(
+      map((res: any) => res.posts.map((a: any) => new Post(a)))
     )
   }
 

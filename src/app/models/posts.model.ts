@@ -1,6 +1,6 @@
 import { PostsInterface } from "../interfaces/posts.interface";
 
-export class posts implements PostsInterface {
+export class Post implements PostsInterface {
     id: number;
     title: string;
     body: string;
